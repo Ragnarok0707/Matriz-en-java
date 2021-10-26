@@ -1,0 +1,104 @@
+package matriz; 
+
+    public class Matrices {
+        public static void main(String[] args) { 
+    
+        int mtz_uno[][] = new int [4][4];
+        int mtz_dos[][] = new int [4][4];
+        int mtz_tres[][] = new int [4][4];
+        int mtz_resultado[][] = new int [4][4];
+        int mtz_resultado2[][] = new int [4][4];
+        //Creacion de la primera matriz
+        for (int i = 0; i < mtz_uno.length; i++) {
+            for (int j = 0; j < mtz_uno.length; j++) {
+                mtz_uno[i][j] = (int) (Math.random() * 5);
+            }
+        }
+
+        //Creacion de la segunda matriz
+        for (int i = 0; i < mtz_dos.length; i++) {
+            for (int j = 0; j < mtz_dos.length; j++) {
+                mtz_dos[i][j] = (int) (Math.random() * 5);
+            }
+        }
+        
+         //Creacion de la tercera matriz
+        for (int i = 0; i < mtz_tres.length; i++) {
+            for (int j = 0; j < mtz_tres.length; j++) {
+                mtz_tres[i][j] = (int) (Math.random() * 5);
+            }
+        }
+
+        //Suma de matrices
+        for (int i = 0; i < mtz_uno.length; i++) {
+            for (int j = 0; j < mtz_dos.length; j++) {
+                mtz_resultado[i][j] = mtz_uno[i][j] + mtz_dos[i][j];
+               
+            }
+        }
+          
+        //Multiplicacion de matrices
+        for (int i = 0; i < mtz_resultado.length; i++) {
+            for (int j = 0; j < mtz_tres.length; j++) {
+                mtz_resultado2[i][j] = mtz_resultado[i][j] * mtz_tres[i][j];
+            }
+        }
+
+            //Imprimiendo las matrices
+            for (int i = 0; i < mtz_uno.length; i++) {
+
+                for (int j = 0; j < mtz_uno.length; j++) {
+                    System.out.print("[ " + mtz_uno[i][j] + " ]");
+
+                }
+
+                if (i == 1) {
+                    System.out.print("  +  ");
+
+                } else {
+                    System.out.print("     ");
+                }
+
+             
+                for (int j = 0; j < mtz_dos.length; j++) {
+                    System.out.print("[ " + mtz_dos[i][j] + " ]");
+
+                }
+
+                if (i == 1) {
+                    System.out.print("  =  ");
+
+                } else {
+                    System.out.print("     ");
+                }
+
+                for (int j = 0; j < mtz_resultado.length; j++) {
+                    System.out.print("[ " + mtz_resultado[i][j] + " ]");
+                }
+              
+                if (i == 1) {
+                    System.out.print("  *  ");
+
+                } else {
+                    System.out.print("     ");
+                }
+
+                for (int j = 0; j < mtz_tres.length; j++) {
+                    System.out.print("[ " + mtz_tres[i][j] + " ]");
+                }
+                
+                if (i == 1) {
+                    System.out.print("  =  ");
+
+                } else {
+                    System.out.print("     ");
+                }
+
+                for (int j = 0; j < mtz_resultado2.length; j++) {
+                    System.out.print("[ " + mtz_resultado2[i][j] + " ]");
+                }
+
+            System.out.println("");
+        }
+    }
+}
